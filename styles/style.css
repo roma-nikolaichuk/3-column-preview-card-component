@@ -185,5 +185,5 @@ body {
 .preview-cards .preview-card__button:hover {
   outline: 2px solid hsl(0, 0%, 95%);
   background: none;
-  color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%) !important;
 }/*# sourceMappingURL=style.css.map */

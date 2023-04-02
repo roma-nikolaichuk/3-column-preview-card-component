@@ -80,7 +80,7 @@ body {
       margin-bottom: 2rem;
     }
 
-     // Styles for title
+    // Styles for title
     &__title {
       margin-bottom: 1.5rem;
       text-transform: uppercase;
@@ -122,7 +122,7 @@ body {
       &:hover {
         outline: 2px solid $very-light-gray;
         background: none;
-        color: $very-light-gray;
+        color: $very-light-gray !important;
       }
     }
   }
