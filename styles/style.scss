@@ -1,0 +1,129 @@
+// Importing other SCSS files into this file
+@import "./reset";
+@import "./mediaQueries";
+@import "./mixins";
+@import "./variables";
+
+body {
+  // Applying a mixin called "flex" with two arguments "center" for both "align-items" and "justify-content" CSS properties.
+  @include flex(center, center);
+
+  background: $very-light-gray;
+  font-size: 15px;
+}
+
+// Base styles for preview cards
+.preview-cards {
+  margin: 1.5rem;
+
+  // Media query for larger screens
+  @include md(lg) {
+    width: 920px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // Styles for each preview card
+  .preview-card {
+    padding: 3rem;
+
+    // Styles for specific card types
+    &--bright-orange {
+      background-color: $bright-orange;
+      border-radius: 0.5rem 0.5rem 0 0;
+
+      // Media query for larger screens
+      @include md(lg) {
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+
+      // Styles the button inside the current element
+      &:has(.preview-card__button) {
+        .preview-card__button {
+          color: $bright-orange;
+        }
+      }
+    }
+
+    // Styles for specific card types
+    &--dark-cyan {
+      background-color: $dark-cyan;
+
+      // Styles the button inside the current element
+      &:has(.preview-card__button) {
+        .preview-card__button {
+          color: $dark-cyan;
+        }
+      }
+    }
+
+    // Styles for specific card types
+    &--very-dark-cyan {
+      background-color: $very-dark-cyan;
+      border-radius: 0 0 0.5rem 0.5rem;
+
+      // Media query for larger screens
+      @include md(lg) {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
+      // Styles the button inside the current element
+      &:has(.preview-card__button) {
+        .preview-card__button {
+          color: $very-dark-cyan;
+        }
+      }
+    }
+
+    // Styles for image
+    &__image {
+      margin-bottom: 2rem;
+    }
+
+     // Styles for title
+    &__title {
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      font-family: $ff-Big-Shoulders-Display;
+      font-size: 2.5rem;
+      font-weight: $fw-700;
+      color: $very-light-gray;
+
+      // Media query for larger screens
+      @include md(lg) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    // Styles for description
+    &__description {
+      margin-bottom: 1.25rem;
+      font-family: $ff-Lexend-Deca;
+      font-weight: $fw-400;
+      color: $transparent-white;
+      line-height: 1.7;
+
+      // Media query for larger screens
+      @include md(lg) {
+        margin-bottom: 4.75rem;
+      }
+    }
+
+    // Styles for button
+    &__button {
+      height: 50px;
+      padding-inline: 2rem;
+      border-radius: 50px;
+      background-color: $very-light-gray;
+      font-family: $ff-Lexend-Deca;
+      font-weight: $fw-400;
+
+      // Hover styles for button
+      &:hover {
+        outline: 2px solid $very-light-gray;
+        background: none;
+        color: $very-light-gray;
+      }
+    }
+  }
+}
