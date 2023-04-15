@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
       rel="stylesheet"
-    />
+    >
     <title>Frontend Mentor | 3-column preview card component</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
+    <!-- Start of the main container -->
     <main class="preview-cards">
       <article class="preview-card preview-card--bright-orange" role="article">
         <picture class="preview-card__image">
@@ -26,7 +28,7 @@
             src="images/icon-sedans.svg"
             alt="Icon for Sedans"
             class="preview-card__image-img"
-          />
+          >
         </picture>
 
         <header class="preview-card__header">
@@ -56,7 +58,7 @@
             src="images/icon-suvs.svg"
             alt="Icon for SUVs"
             class="preview-card__image-img"
-          />
+          >
         </picture>
 
         <header class="preview-card__header">
@@ -86,7 +88,7 @@
             src="images/icon-luxury.svg"
             alt="Icon for Luxury"
             class="preview-card__image-img"
-          />
+          >
         </picture>
 
         <header class="preview-card__header">
@@ -110,19 +112,52 @@
         </footer>
       </article>
     </main>
+    <!-- End of the main container -->
+    <!-- Start of the footer -->
+    <footer class="footer">
+      <button
+        class="footer__button js-toggle-tip"
+        type="button"
+        aria-label="Attribution"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="attribution"
+      >
+        <img
+          class="footer__image"
+          src="https://avatars.githubusercontent.com/u/107611767?s=400&u=af2347175f31d710bee7ec634f994ae53d460731&v=4"
+          alt=""
+          width="50"
+          height="50"
+        >
+      </button>
 
-    <!-- <div class="attribution">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
-        target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a
-        href="https://github.com/roma-nikolaichuk/preview-cards-component"
-        target="_blank"
-        >Roman Nikolaichuk</a
-      >.
-    </div> -->
+      <div
+        id="attribution"
+        role="tooltip"
+        class="footer__attribution footer__dialog js-tooltip"
+      >
+        <p class="footer__text">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://github.com/roma-nikolaichuk/3-column-preview-card-component"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Roman Nikolaichuk</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <!-- End of the footer -->
   </body>
 </html>
